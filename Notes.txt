@@ -1,0 +1,7 @@
+Angular connects a view with a module by using ng-app. Whatever value that is provided there is matched to a module name.
+The one with the match owns the view.
+
+Controller is nested within an app. When you specify a controller ng-controller, then it tries to match it to a controller that's within the app.
+View is the HTML part and the model is the Javascript part that connects with it. Angular will keep the model and view bound.
+
+Dependency injection - pass object into method instead of creating it inside the method.
