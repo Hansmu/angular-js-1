@@ -12,3 +12,8 @@ Angular has an object created, that has an injector. It parses the function and 
 If a function contains a certain name, then Angular sees that name and says that I know that name and injects it to where it sees the name.
 This means that all you have to do is put the name in correctly and it'll match it.
 angular.injector().annotate(our function).
+
+Interpolation - creating a string by combining strings and placeholders.
+
+$scope connects what's going on with the controller and the view. Whatever variable you put in it, you can access in the view.
+Don't have to use $scope.myMessage, because when you use {{ myMessage }} it is assumed that the variable is inside the $scope.
