@@ -23,3 +23,6 @@ Directive - an instruction to AngularJS to manipulate a piece of the DOM.
 Javascript has an event loop. Events are constantly happening, just have to add a listener to listen to them.
 AngularJS automatically adds listeners to events. Every time you bind, a watcher is added by Angular to check if the value changes.
 Angular updates everything in the DOM that's connected by the variable if the variable changes. It updates until the old and new values are the same.
+
+Directives can be put wherever you want. There are quite a bit of directives - click, if, repeat, button down etc. Documentation shows it all.
+ng-cloak hides an element in the DOM until AngularJS has worked on it.
