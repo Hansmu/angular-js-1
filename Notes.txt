@@ -4,4 +4,11 @@ The one with the match owns the view.
 Controller is nested within an app. When you specify a controller ng-controller, then it tries to match it to a controller that's within the app.
 View is the HTML part and the model is the Javascript part that connects with it. Angular will keep the model and view bound.
 
+Everything in JS can have a toString used on them, which is the written code as a string.
+
 Dependency injection - pass object into method instead of creating it inside the method.
+How Angular does DI:
+Angular has an object created, that has an injector. It parses the function and returns an array of the method parameters as strings.
+If a function contains a certain name, then Angular sees that name and says that I know that name and injects it to where it sees the name.
+This means that all you have to do is put the name in correctly and it'll match it.
+angular.injector().annotate(our function).
