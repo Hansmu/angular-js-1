@@ -19,3 +19,7 @@ $scope connects what's going on with the controller and the view. Whatever varia
 Don't have to use $scope.myMessage, because when you use {{ myMessage }} it is assumed that the variable is inside the $scope.
 
 Directive - an instruction to AngularJS to manipulate a piece of the DOM.
+
+Javascript has an event loop. Events are constantly happening, just have to add a listener to listen to them.
+AngularJS automatically adds listeners to events. Every time you bind, a watcher is added by Angular to check if the value changes.
+Angular updates everything in the DOM that's connected by the variable if the variable changes. It updates until the old and new values are the same.
