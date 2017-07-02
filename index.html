@@ -33,6 +33,16 @@
 
         <input type="button" value="Click me" ng-click="alertClick()"/>
         <div ng-cloak>{{myInputField}}</div>
+
+        <ul>
+            <li ng-repeat="user in users">
+                {{ user.name }}
+            </li>
+        </ul>
+
+        Add user:
+        <input type="text" ng-model="newUserName"/>
+        <button ng-click="addUser">Add</button>
     </div>
 </body>
 </html>
