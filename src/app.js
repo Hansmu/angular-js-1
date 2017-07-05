@@ -29,6 +29,7 @@ myFirstApplication.service('nameService', function() {
 myFirstApplication.controller('mainController', ['$scope', '$location', '$http', 'nameService', function ($scope, $location, $http, nameService) {
 
     $scope.myInputField = 'Some value';
+    $scope.someName = 'Bob Roberts';
     console.log(nameService.name);
 
 }]);
@@ -42,8 +43,14 @@ myFirstApplication.controller('secondController', ['$scope', '$location', '$http
 }]);
 
 //  Template is some default directive property.
+//  Defining a scope isolates the scope and it's no longer shared.
+//  @ means it'll expect text back. If you just give it an @, then it assumes the property name is the attribute.
 myFirstApplication.directive("searchResult", function() {
     return {
-        templateUrl: 'directives/search-result.html'
+        templateUrl: 'directives/search-result.html',
+        scope: {
+            myInputField: 'Isolated view',
+            personName: "@"
+        }
     };
 });
