@@ -17,9 +17,19 @@ myFirstApplication.config(function($routeProvider) {
         });
 });
 
-myFirstApplication.controller('mainController', ['$scope', '$location', '$http', function ($scope, $location, $http) {
+myFirstApplication.service('nameService', function() {
+    var self = this;
+    this.name = 'John Doe';
+
+    this.namelength = function () {
+        return self.name.length;
+    };
+});
+
+myFirstApplication.controller('mainController', ['$scope', '$location', '$http', 'nameService', function ($scope, $location, $http, nameService) {
 
     $scope.myInputField = '';
+    console.log(nameService.name);
 
 }]);
 

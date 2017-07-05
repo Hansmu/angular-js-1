@@ -32,3 +32,5 @@ Anything after the # in the URL is just a string. You could set it to say #/what
 You could catch the event with hashchange and if-else based on the hash value to pretend there are multiple pages.
 
 ng-view determines where the newly loaded page will be dropped into.
+
+Everything but $scope is a singleton in AngularJS.
