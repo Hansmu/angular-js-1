@@ -36,3 +36,5 @@ ng-view determines where the newly loaded page will be dropped into.
 Everything but $scope is a singleton in AngularJS.
 
 AngularJS normalizes variable names between Javascript and HTML. result-link-href becomes resultLinkHref in JS.
+
+Directive can access the model of whatever controller that's connected to its view.

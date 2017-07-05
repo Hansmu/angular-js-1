@@ -28,7 +28,7 @@ myFirstApplication.service('nameService', function() {
 
 myFirstApplication.controller('mainController', ['$scope', '$location', '$http', 'nameService', function ($scope, $location, $http, nameService) {
 
-    $scope.myInputField = '';
+    $scope.myInputField = 'Some value';
     console.log(nameService.name);
 
 }]);
