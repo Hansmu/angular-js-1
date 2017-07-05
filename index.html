@@ -6,43 +6,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.4/angular-messages.min.js"></script>
     <script src="https://code.angularjs.org/1.6.4/angular-resource.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
     <script src="src/app.js"></script>
 </head>
 <body>
-    <div ng-controller="mainController">
-        <div>
-            <label>What is your major malfunction?</label>
-            <input type="text" ng-model="myInputField"/>
-        </div>
+    <ul>
+        <li>
+            <a href="#">Home</a>
+            <a href="#/second">Second</a>
+        </li>
+    </ul>
 
-        <div ng-class="{ 'alert-warning': myInputField.length < characters }" ng-if="myInputField.length !== characters">
-            Must be 5 characters!
-        </div>
-        <div ng-show="myInputField.length === characters">
-            5 characters, yay!
-        </div>
-
-        <label>Malfunction: {{ lowercasehandle() }}</label>
-
-        <h3>Rules</h3>
-        <ul>
-            <li ng-repeat="rule in rules">
-                {{ rule.rulename }}
-            </li>
-        </ul>
-
-        <input type="button" value="Click me" ng-click="alertClick()"/>
-        <div ng-cloak>{{myInputField}}</div>
-
-        <ul>
-            <li ng-repeat="user in users">
-                {{ user.name }}
-            </li>
-        </ul>
-
-        Add user:
-        <input type="text" ng-model="newUserName"/>
-        <button ng-click="addUser">Add</button>
-    </div>
+    <div ng-view></div>
 </body>
 </html>

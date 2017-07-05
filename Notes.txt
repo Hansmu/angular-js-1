@@ -26,3 +26,9 @@ Angular updates everything in the DOM that's connected by the variable if the va
 
 Directives can be put wherever you want. There are quite a bit of directives - click, if, repeat, button down etc. Documentation shows it all.
 ng-cloak hides an element in the DOM until AngularJS has worked on it.
+
+In href a #whatever is a fragment identifier. It jumps to a part of the DOM, a fragment, that's identified with the text(id=whatever).
+Anything after the # in the URL is just a string. You could set it to say #/whatever/3 and pretend that it's an URL.
+You could catch the event with hashchange and if-else based on the hash value to pretend there are multiple pages.
+
+ng-view determines where the newly loaded page will be dropped into.
