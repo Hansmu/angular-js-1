@@ -40,3 +40,10 @@ myFirstApplication.controller('secondController', ['$scope', '$location', '$http
 
 
 }]);
+
+//  Template is some default directive property.
+myFirstApplication.directive("searchResult", function() {
+    return {
+        template: '<p>John Doe Found</p>'
+    };
+});
